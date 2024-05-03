@@ -43,3 +43,28 @@ def perm_to_string(p):
     return s
 
 I = (flu, luf, ufl, fur, urf, rfu, fdl, dlf, lfd, frd, rdf, dfr,     bul, ulb, lbu, bru, rub, ubr, bld, ldb, dbl, bdr, drb, rbd)
+
+F = (fdl, dlf, lfd, flu, luf, ufl, frd, rdf, dfr, fur, urf, rfu, 
+     bul, ulb, lbu, bru, rub, ubr, bld, ldb, dbl, bdr, drb, rbd)    # Front face rotated clockwise.
+
+Fi = perm_inverse(F)                                                # Front face rotated counter-clockwise.
+
+L = (ulb, lbu, bul, fur, urf, rfu, ufl, flu, luf, frd, rdf, dfr,
+     dbl, bld, ldb, bru, rub, ubr, dlf, lfd, fdl, bdr, drb, rbd)    # Left face rotated clockwise.
+
+Li = perm_inverse(L)                                                # Left face rotated counter-clockwise.
+
+U = (rfu, fur, urf, rub, ubr, bru, fdl, dlf, lfd, frd, rdf, dfr,
+     luf, ufl, flu, lbu, bul, ulb, bld, ldb, dbl, bdr, drb, rbd)    # Upper face rotated clockwise.
+
+Ui = perm_inverse(U)                                                # Upper face rotated counter-clockwise.
+
+twists = (F, Fi, L, Li, U, Ui)
+
+twists_names = {}
+twists_names[F] = 'F'
+twists_names[Fi] = 'Fi'
+twists_names[L] = 'L'
+twists_names[Li] = 'Li'
+twists_names[U] = 'U'
+twists_names[Ui] = 'Ui'
