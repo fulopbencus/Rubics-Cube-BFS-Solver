@@ -25,3 +25,14 @@ yog = dbl = 20
 oyb = bdr = 21
 ybo = drb = 22
 boy = rbd = 23
+
+def perm_apply(perm, position):
+    return tuple([position[i] for i in perm])
+
+def perm_inverse(p):
+    n = len(p)
+    q = [0]*n
+    for i in range(n):
+        q[p[i]] = i
+    return tuple(q)
+
