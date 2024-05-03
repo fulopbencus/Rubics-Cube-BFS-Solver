@@ -36,3 +36,10 @@ def perm_inverse(p):
         q[p[i]] = i
     return tuple(q)
 
+def perm_to_string(p):
+    s = "("
+    for x in p: s = s + "%2d "%x
+    s += ")"
+    return s
+
+I = (flu, luf, ufl, fur, urf, rfu, fdl, dlf, lfd, frd, rdf, dfr,     bul, ulb, lbu, bru, rub, ubr, bld, ldb, dbl, bdr, drb, rbd)
