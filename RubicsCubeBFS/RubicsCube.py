@@ -1,10 +1,50 @@
 # RubicsCube
 # Author: Bence Fulop
 
-rgw = flu = 0
-gwr = luf = 1
-wrg = ufl = 2
-rwb = fur = 3
+"""
+Represents a 2x2x2 Rubik's cube
+The six sides of the cube: Front(F) Back(B)   Up(U) Down(D)   Left(L) Right(R)
+
+Cubie positions starting
+at 0, front to back, up to down, left to right.
+Alphabetic names refer the cubies.
+
+Each 8 cubie has three faces, so we have 24 face
+positions.
+
+For example:
+
+F or B, in clockwise order (looking from outside).
+   0th cubie = FLU
+   1st cubie = FUR
+   2nd cubie = FDL
+   3rd cubie = FRD
+   4th cubie = BUL
+   5th cubie = BRU
+   6th cubie = BLD
+   7th cubie = BDR
+
+Permutations:
+
+A permutation p on 0,1,...,n-1 is represented as
+a list of length n-1.  p[i] = j
+means that p maps i to j.
+
+When operating on a list c (a list of length
+24 of colors), then  p * c
+is the rearranged list of colors:
+   (p * c)[i] = c[p[i]]    for all i
+Thus, p[i] is the location of where the color of
+position i will come from; p[i] = j means that
+the color at position j moves to position i.
+"""
+
+# The cube is determined here manually
+# START
+rgw = flu = 0 # (0-th cubie; front face)
+gwr = luf = 1 # (0-th cubie; left face)
+wrg = ufl = 2 # (0-th cubie; up face)
+rwb = fur = 3 # (1-st cubie and so on...)
 wbr = urf = 4
 brw = rfu = 5
 ryg = fdl = 6
@@ -25,6 +65,7 @@ yog = dbl = 20
 oyb = bdr = 21
 ybo = drb = 22
 boy = rbd = 23
+# END
 
 def perm_apply(perm, position):
     return tuple([position[i] for i in perm])
