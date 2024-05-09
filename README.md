@@ -1,5 +1,6 @@
 # 2x2x2 Rubik's Cube Breadth-First solver
 ## About
+The Rubics name is intentional.
 ### Cube
 This is an assignment work written in python, representing a 2x2x2 Rubik's cube. It has 6 sides with 24 faces on 8 "cubie".
 
@@ -29,4 +30,4 @@ Python3
 GPL-2.0-or-later
 
 ## Author
-Fülöp Bence <fulopbence@gmail.com>
+Fülöp Bence <fulopbencus@gmail.com>
